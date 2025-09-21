@@ -1,0 +1,23 @@
+<h1>{{title}} - app component</h1>
+
+<!-- normal way of callling child component -->
+<app-page-list ></app-page-list>
+<h3> below laoding useing loaded under dynmic ng component loading</h3>
+<!--  -->
+
+<!-- another way of callling child component by *ngComponentOutlet and a method in ts file-->
+<div *ngComponentOutlet="LoadComponent()"></div>
+
+<!-- another way of callling child component by by click event and a method in ts file with constructor-->
+<button (click)="LoadComponentbyClick()">click me to see component</button>
+
+<!--  way of removing  child component by by click event and a method in ts file with constructor-->
+
+<button (click)="RemoveComponent()"> click to remove</button>
+
+
+<!-- onchange -->
+<app-profile [childGetValue]="passChangeValue"><h1>{{title}}</h1>
+<p> hellow im from app to profile via ng-content</p></app-profile>
+
+  <button (click)="Changeeventclick()">click me for change</button>
